@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@android:color/transparent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/glass_panel"
+        android:padding="24dp"
+        android:gravity="center_horizontal">
+
+
+        <!-- Caller Info -->
+        <TextView
+            android:id="@+id/caller_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="John Doe"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/call_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ongoing Call - 03:24"
+            android:textColor="#B3FFFFFF"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp"/>
+
+        <!-- End Call button -->
+        <Button
+            android:id="@+id/btn_hangup"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:text="End Call"
+            android:backgroundTint="#FF4D4D"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="24dp"/>
+
+        <!-- Focus Button -->
+        <Button
+            android:id="@+id/btn_focus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Focus Call"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#4DFFFFFF"
+            android:textColor="#FFFFFF"/>
+    </LinearLayout>
+</FrameLayout>
