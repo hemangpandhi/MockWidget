@@ -11,70 +11,129 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:background="@drawable/glass_panel"
-        android:padding="24dp"
-        android:gravity="center_horizontal">
-
+        android:padding="24dp">
 
         <!-- Title -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Smart Home"
-            android:textColor="#FFFFFF"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="16dp"/>
-
-        <!-- Garage Door Control -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center_vertical"
-            android:background="#1AFFFFFF"
-            android:padding="12dp"
-            android:layout_marginBottom="12dp">
+            android:layout_marginBottom="24dp">
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@android:drawable/ic_dialog_dialer"
+                android:tint="#00E5FF"
+                android:layout_marginRight="12dp"/>
             <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Garage Door"
-                android:textColor="#FFFFFF"
-                android:textSize="15sp"
-                android:textStyle="bold"/>
-            <Button
-                android:id="@+id/btn_garage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Closed"
-                android:backgroundTint="#FF9800"
-                android:textColor="#FFFFFF"/>
+                android:text="Smart Home"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp"
+                android:fontFamily="sans-serif-light"/>
         </LinearLayout>
 
-        <!-- Home Lights Control -->
+        <!-- Grid of Devices -->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:background="#1AFFFFFF"
-            android:padding="12dp">
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Porch Lights"
-                android:textColor="#FFFFFF"
-                android:textSize="15sp"
-                android:textStyle="bold"/>
-            <Button
-                android:id="@+id/btn_lights"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="OFF"
-                android:backgroundTint="#4DFFFFFF"
-                android:textColor="#FFFFFF"/>
-        </LinearLayout>
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
 
+            <!-- Garage Door Tile -->
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/glass_card_inner">
+                
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:gravity="center">
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@android:drawable/ic_dialog_map"
+                        android:tint="#FFFFFF"
+                        android:layout_marginBottom="8dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Garage Door"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp"
+                        android:fontFamily="sans-serif-medium"
+                        android:gravity="center"/>
+                </LinearLayout>
+
+                <!-- Status Badge -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CLOSED"
+                    android:textColor="#FF9800"
+                    android:textSize="12sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:background="#33FF9800"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:layout_gravity="top|right"
+                    android:layout_margin="12dp"/>
+            </FrameLayout>
+
+            <!-- Porch Lights Tile -->
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginLeft="12dp"
+                android:background="@drawable/glass_card_inner">
+                
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:gravity="center">
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@android:drawable/ic_dialog_info"
+                        android:tint="#00E5FF"
+                        android:layout_marginBottom="8dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Porch Lights"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp"
+                        android:fontFamily="sans-serif-medium"
+                        android:gravity="center"/>
+                </LinearLayout>
+
+                <!-- Status Badge -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ON"
+                    android:textColor="#00E5FF"
+                    android:textSize="12sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:background="#3300E5FF"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:layout_gravity="top|right"
+                    android:layout_margin="12dp"/>
+            </FrameLayout>
+        </LinearLayout>
     </LinearLayout>
 </FrameLayout>

@@ -14,52 +14,53 @@
         android:padding="24dp"
         android:gravity="center_horizontal">
 
-
         <!-- Climate Info -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Climate Control"
             android:textColor="#FFFFFF"
-            android:textSize="18sp"
-            android:textStyle="bold"/>
+            android:textSize="20sp"
+            android:fontFamily="sans-serif-light"
+            android:layout_marginBottom="16dp"/>
 
         <!-- Temp Controller Layout -->
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:gravity="center"
-            android:layout_marginTop="16dp">
+            android:gravity="center">
 
             <ImageButton
                 android:id="@+id/btn_temp_down"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:background="@drawable/glass_button_bg"
                 android:src="@android:drawable/ic_menu_close_clear_cancel"
                 android:rotation="45"
-                android:tint="#FFFFFF"/>
+                android:tint="#FFFFFF"
+                android:elevation="4dp"/>
 
             <TextView
                 android:id="@+id/txt_temperature"
-                android:layout_width="100dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="72°F"
-                android:textColor="#FFFFFF"
-                android:textSize="36sp"
-                android:textStyle="bold"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"/>
+                android:textColor="#00E5FF"
+                android:textSize="64sp"
+                android:fontFamily="sans-serif-thin"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp"/>
 
             <ImageButton
                 android:id="@+id/btn_temp_up"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:background="@drawable/glass_button_bg"
                 android:src="@android:drawable/ic_menu_add"
-                android:tint="#FFFFFF"/>
+                android:tint="#FFFFFF"
+                android:elevation="4dp"/>
         </LinearLayout>
 
         <!-- AC Toggle / Fan Status -->
@@ -68,24 +69,26 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center"
-            android:layout_marginTop="24dp">
+            android:layout_marginTop="32dp">
 
             <Button
                 android:id="@+id/btn_ac_toggle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="120dp"
+                android:layout_height="48dp"
                 android:text="A/C ON"
-                android:backgroundTint="#4DFFFFFF"
-                android:textColor="#FFFFFF"
-                android:layout_marginRight="16dp"/>
+                android:background="@drawable/glass_button_active_bg"
+                android:textColor="#00E5FF"
+                android:fontFamily="sans-serif-medium"
+                android:layout_marginRight="24dp"/>
 
             <Button
                 android:id="@+id/btn_auto_toggle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="120dp"
+                android:layout_height="48dp"
                 android:text="AUTO"
-                android:backgroundTint="#4DFFFFFF"
-                android:textColor="#FFFFFF"/>
+                android:background="@drawable/glass_button_bg"
+                android:textColor="#FFFFFF"
+                android:fontFamily="sans-serif-medium"/>
         </LinearLayout>
     </LinearLayout>
 </FrameLayout>

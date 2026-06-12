@@ -12,8 +12,21 @@
         android:orientation="vertical"
         android:background="@drawable/glass_panel"
         android:padding="24dp"
-        android:gravity="center_horizontal">
+        android:gravity="center">
 
+        <!-- Avatar Placeholder -->
+        <FrameLayout
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/glass_card_inner"
+            android:layout_marginBottom="16dp">
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:src="@android:drawable/ic_menu_myplaces"
+                android:tint="#00E5FF"/>
+        </FrameLayout>
 
         <!-- Caller Info -->
         <TextView
@@ -22,36 +35,45 @@
             android:layout_height="wrap_content"
             android:text="John Doe"
             android:textColor="#FFFFFF"
-            android:textSize="22sp"
-            android:textStyle="bold"/>
+            android:textSize="28sp"
+            android:fontFamily="sans-serif-medium"/>
 
         <TextView
             android:id="@+id/call_status"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Ongoing Call - 03:24"
-            android:textColor="#B3FFFFFF"
-            android:textSize="14sp"
-            android:layout_marginTop="4dp"/>
+            android:textColor="#00E5FF"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif-light"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="32dp"/>
 
-        <!-- End Call button -->
-        <Button
-            android:id="@+id/btn_hangup"
-            android:layout_width="160dp"
-            android:layout_height="wrap_content"
-            android:text="End Call"
-            android:backgroundTint="#FF4D4D"
-            android:textColor="#FFFFFF"
-            android:layout_marginTop="24dp"/>
-
-        <!-- Focus Button -->
-        <Button
-            android:id="@+id/btn_focus"
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Focus Call"
-            android:layout_marginTop="16dp"
-            android:backgroundTint="#4DFFFFFF"
-            android:textColor="#FFFFFF"/>
+            android:orientation="horizontal">
+
+            <!-- End Call button -->
+            <Button
+                android:id="@+id/btn_hangup"
+                android:layout_width="140dp"
+                android:layout_height="56dp"
+                android:text="End Call"
+                android:background="@drawable/glass_button_danger_bg"
+                android:textColor="#FF4D4D"
+                android:fontFamily="sans-serif-medium"
+                android:layout_marginRight="16dp"/>
+
+            <!-- Focus Button -->
+            <Button
+                android:id="@+id/btn_focus"
+                android:layout_width="140dp"
+                android:layout_height="56dp"
+                android:text="Focus"
+                android:background="@drawable/glass_button_bg"
+                android:textColor="#FFFFFF"
+                android:fontFamily="sans-serif-medium"/>
+        </LinearLayout>
     </LinearLayout>
 </FrameLayout>
