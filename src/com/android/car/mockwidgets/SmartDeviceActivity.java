@@ -19,27 +19,33 @@ public class SmartDeviceActivity extends Activity {
         setContentView(R.layout.smart_device_widget);
 
 
-        Button btnGarage = findViewById(R.id.btn_garage);
+        View btnGarage = findViewById(R.id.btn_garage);
+        TextView badgeGarage = findViewById(R.id.badge_garage);
         btnGarage.setOnClickListener(v -> {
             mGarageClosed = !mGarageClosed;
             if (mGarageClosed) {
-                btnGarage.setText("Closed");
-                btnGarage.setBackgroundColor(0xFFFF9800); // Orange
+                badgeGarage.setText("CLOSED");
+                badgeGarage.setTextColor(0xFFFF9800);
+                badgeGarage.setBackgroundColor(0x33FF9800); // Orange
             } else {
-                btnGarage.setText("Open");
-                btnGarage.setBackgroundColor(0xFF4CAF50); // Green
+                badgeGarage.setText("OPEN");
+                badgeGarage.setTextColor(0xFF4CAF50);
+                badgeGarage.setBackgroundColor(0x334CAF50); // Green
             }
         });
 
-        Button btnLights = findViewById(R.id.btn_lights);
+        View btnLights = findViewById(R.id.btn_lights);
+        TextView badgeLights = findViewById(R.id.badge_lights);
         btnLights.setOnClickListener(v -> {
             mLightsOff = !mLightsOff;
             if (mLightsOff) {
-                btnLights.setText("OFF");
-                btnLights.setBackgroundTintList(android.content.res.ColorStateList.valueOf(0x4DFFFFFF));
+                badgeLights.setText("OFF");
+                badgeLights.setTextColor(0xFF9E9E9E);
+                badgeLights.setBackgroundColor(0x339E9E9E);
             } else {
-                btnLights.setText("ON");
-                btnLights.setBackgroundTintList(android.content.res.ColorStateList.valueOf(0xFF2196F3)); // Blue
+                badgeLights.setText("ON");
+                badgeLights.setTextColor(0xFF00E5FF);
+                badgeLights.setBackgroundColor(0x3300E5FF); // Blue
             }
         });
     }

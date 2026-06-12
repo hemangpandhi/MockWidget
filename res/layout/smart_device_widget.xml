@@ -43,6 +43,7 @@
 
             <!-- Garage Door Tile -->
             <FrameLayout
+                android:id="@+id/btn_garage"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -73,6 +74,7 @@
 
                 <!-- Status Badge -->
                 <TextView
+                    android:id="@+id/badge_garage"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="CLOSED"
@@ -90,6 +92,7 @@
 
             <!-- Porch Lights Tile -->
             <FrameLayout
+                android:id="@+id/btn_lights"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -120,6 +123,7 @@
 
                 <!-- Status Badge -->
                 <TextView
+                    android:id="@+id/badge_lights"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="ON"
